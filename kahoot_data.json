@@ -1,0 +1,31 @@
+{
+  "username": "USERNAME",
+  "password": "PASSWORD",
+  "title": "Quiz title",
+  "questions": [
+    {
+      "question": {
+        "title": "How old is STAR WARS?"
+      },
+      "choices": [
+        "25",
+        "40",
+        "60",
+        "65"
+      ],
+      "correct": 2
+    },
+    {
+      "question": {
+        "title": "What year did STAR WARS got release?"
+      },
+      "choices": [
+        "1991",
+        "1988",
+        "1977",
+        "1965"
+      ],
+      "correct": 3
+    }
+  ]
+}
