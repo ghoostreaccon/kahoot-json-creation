@@ -84,7 +84,7 @@ try:
             add_btn.click()
             time.sleep(2)
         except:
-            print("⚠️ Could not click 'Add question' button.")
+            print("Could not click 'Add question' button.")
             continue
 
         try:   
@@ -94,7 +94,7 @@ try:
             add_btn.click()
             time.sleep(2)
         except:
-            print("⚠️ Could not click 'Quiz' button.")
+            print("Could not click 'Quiz' button.")
             continue
 
         try:
@@ -106,7 +106,7 @@ try:
             q_input.send_keys(question_text)
             time.sleep(1)
         except:
-            print("⚠️ Could not enter question text.")
+            print("Could not enter question text.")
             continue
 
         try:
@@ -120,9 +120,9 @@ try:
                     ans_input.send_keys(ans)
                     time.sleep(0.5)
                 except:
-                    print(f"⚠️ Could not write answer {i+1}")
+                    print(f"Could not write answer {i+1}")
         except:
-            print("⚠️ Answer input fields not found.")
+            print("Answer input fields not found.")
             continue
 
         try:
@@ -135,22 +135,22 @@ try:
                     driver.execute_script("arguments[0].click();", selected_toggle)
                     time.sleep(1)
                 else:
-                    print("✔️ Correct answer already selected.")
+                    print("Correct answer already selected.")
             else:
-                print(f"⚠️ Correct index {q['correct']} out of range for toggle buttons.")
+                print(f"Correct index {q['correct']} out of range for toggle buttons.")
         except Exception as e:
-            print(f"⚠️ Could not set correct answer: {e}")
+            print(f"Could not set correct answer: {e}")
 
     try:
         s_input = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@data-functional-selector='top-bar__save-button']")))
         s_input.click()
         time.sleep(1)
     except Exception as e:
-        print(f"⚠️ Error trying to save. {e}")
+        print(f"Error trying to save. {e}")
 
 
         
-    print("✅ Kahoot creation complete!")
+    print("Kahoot creation complete!")
 
 finally:
     driver.quit()
